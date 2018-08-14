@@ -1,8 +1,8 @@
 package org.xyz.dbdoc
 
 import groovy.util.logging.Log4j
-import org.xyz.dbdoc.comment.OracleReadTableComment
 import org.xyz.dbdoc.comment.ReadTableComment
+import org.xyz.dbdoc.comment.ReadTableCommentFactory
 
 /**
  * DbDocMain.
@@ -44,7 +44,7 @@ class DbDocMain {
         ReadTables readTables = ReadTablesFactory.make(connectionDef.dbType)
         Set dbTables = readTables.readTables(connectionDef, tables)
         log.info "dbTables ${dbTables}"
-        ReadTableComment tableComment = new OracleReadTableComment()
+        ReadTableComment tableComment = ReadTableCommentFactory.make(connectionDef.dbType)
         def commentMap = tableComment.readComments(connectionDef, dbTables)
         log.info "commentMap ${commentMap}"
     }

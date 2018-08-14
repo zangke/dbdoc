@@ -18,7 +18,7 @@ class ReadTablesFactory {
                 result = new MySqlReadTables()
                 break
             default:
-                throw new Exception("ReadTables未实现！")
+                throw new Exception("ReadTables has't implement!")
                 break
         }
         result
