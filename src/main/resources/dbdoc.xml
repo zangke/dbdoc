@@ -1,0 +1,22 @@
+<node>
+    <datasource>
+        <connection_url>
+            jdbc:oracle:thin:@(description=(address_list=(address=(protocol=tcp)(host=10.211.55.3)(port=1521)))(connect_data=(service_name=orcl)))
+        </connection_url>
+        <driver_class>
+            oracle.jdbc.driver.OracleDriver
+        </driver_class>
+        <user_name>
+            LDRK
+        </user_name>
+        <password>
+            12345678
+        </password>
+    </datasource>
+
+    <table name="LOCK_RY"/>
+    <!--<table name="LOCK_RY,LOCK_OPEN"/>-->
+    <!--<table name="LOCK*"/>-->
+    <!--<table name="*"/>-->
+
+</node>
